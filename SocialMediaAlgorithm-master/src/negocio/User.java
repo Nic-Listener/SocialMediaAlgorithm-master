@@ -2,6 +2,7 @@ package negocio;
 
 import GUI.IPerfilUserDAO;
 import dados.PerfilDAOImpl;
+import dados.PerfilUserDAO;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -56,6 +57,6 @@ public class User extends PerfilUser {
     }
 
     public IPerfilUserDAO getPerfil() {
-        return new PerfilUserDAOImpl(this);
+        return PerfilUserDAO;
     }
 }

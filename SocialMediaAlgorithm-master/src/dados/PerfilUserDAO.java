@@ -6,11 +6,15 @@ import java.io.*;
 import java.util.HashMap;
 import java.util.Map;
 
-public class PerfilUserDAO implements IPerfilUserDAO {
+import java.io.*;
+import java.util.HashMap;
+import java.util.Map;
+
+public abstract class PerfilUserDAO {
 
     private static final String FILE_PATH = "perfis.dat";
 
-    @Override
+
     public void salvar(Map<String, Integer> afinidades) {
         try {
             FileOutputStream fileOut = new FileOutputStream(FILE_PATH);
@@ -23,7 +27,6 @@ public class PerfilUserDAO implements IPerfilUserDAO {
         }
     }
 
-    @Override
     public Map<String, Integer> getAfinidades() {
         Map<String, Integer> afinidades = new HashMap<>();
         try {
